@@ -6,14 +6,14 @@ using namespace std;
 
 int main() {
 
-    // Load pre-trained face detection model
+    // Load haarcascade face detection model
     cv::CascadeClassifier face_cascade;
     if (!face_cascade.load("Resources/haarcascade_frontalface_alt.xml")) {
         std::cerr << "Error loading face detection model" << std::endl;
         return -1;
     }
 
-    // Open the default camera (usually 0)
+    // Open the default camera
     cv::VideoCapture cap(0);
 
     // Check if camera opened successfully
@@ -27,10 +27,10 @@ int main() {
 
     while (true) {
         cv::Mat frame;
-           
+
         // Capture frame-by-frame
         cap >> frame;
-           
+
         // If the frame is empty, break immediately
         if (frame.empty())
             break;
@@ -42,14 +42,14 @@ int main() {
         // Detect faces in the frame
         std::vector<cv::Rect> faces;
         face_cascade.detectMultiScale(gray, faces);
-            
+
         // Add text to the image
         std::string text = "sad";
         int fontFace = cv::FONT_HERSHEY_SIMPLEX;
         double fontScale = 0.9;
         cv::Scalar color(36, 255, 12); // Text color in BGR format (here: green)
         int thickness = 2; // Thickness of the text
-            
+
 
         // Draw rectangles around detected faces
         for (const auto& face : faces) {
@@ -74,5 +74,5 @@ int main() {
     cv::destroyAllWindows();
 
     return 0;
-    
+
 }
