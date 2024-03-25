@@ -15,10 +15,13 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="Depth_Tracker.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Document_Scanner.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Face_Recognition.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -38,6 +41,7 @@
     <None Include="README.md" />
     <None Include="x64\Debug\opencv.ilk" />
     <None Include=".gitattributes" />
+    <None Include="Depth.md" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="Info.txt" />

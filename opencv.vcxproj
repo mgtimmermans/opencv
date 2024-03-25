@@ -133,7 +133,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Document_Scanner.cpp" />
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Face_Recognition.cpp" />
+    <ClCompile Include="Depth_Tracker.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Xml Include="Resources\haarcascade_frontalface_alt.xml" />
@@ -145,6 +146,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitattributes" />
+    <None Include="Depth.md" />
     <None Include="README.md" />
     <None Include="x64\Debug\opencv.ilk" />
   </ItemGroup>
